@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {StyleSheet, View, Image, Text, ScrollView, Button} from 'react-native';
+import {StyleSheet, View, Image, Text, ScrollView, Button, TouchableOpacity} from 'react-native';
 
 export default class App extends Component {
 
@@ -16,9 +16,20 @@ export default class App extends Component {
     return (
     <ScrollView> 
       <View style={styles.MainContainer}>
+      <TouchableOpacity 
+        onPress={() => alert('Possui títulos prestes a expirar!')}
+        style={{height: 30, alignSelf: 'flex-end', marginRight:'5%', marginTop:'5%', elevation:5}}
+      >
+        <View>
+          <Image
+            style={{width:40, height:40}}
+            source={require('../assets/images/warning.png')}
+          />
+        </View>
+      </TouchableOpacity>
         <Image
           source={{uri: 'https://bootdey.com/img/Content/avatar/avatar7.png',}}
-          style={{ width: 120, height: 120, borderRadius: 120 / 2, marginTop:50 }}
+          style={{ width: 120, height: 120, borderRadius: 120 / 2, marginTop:20}}
         />
         <Text style={styles.text}>Pedro Monteiro</Text>
          

@@ -82,7 +82,7 @@ render(){
                 </Text>
                 <Text style={{marginLeft:8, marginTop:5, fontSize:15, color:"#434549"}}>
                     <Text style={{fontWeight: "bold"}}>Local: </Text>
-                    <Text>Parque do Zé</Text>
+                    <Text>APARC - Bom Sucesso, Porto</Text>
                 </Text>
                 <View style={{flexDirection:'row',}}>
                     <View style={styles.ButtonContainer}>
