@@ -5,6 +5,10 @@ export default class ReservarParque extends React.Component {
   
   static navigationOptions = ({ navigation }) => ({
     title: navigation.getParam('nome'),
+    headerStyle:{
+      height:50,
+      marginTop:-20,
+    },
   });
       
   state={
@@ -52,7 +56,7 @@ export default class ReservarParque extends React.Component {
         </View>
         <TouchableOpacity
           style={{borderRadius:8,backgroundColor:"#FFFDF7",width:80, height:40, borderWidth:1, flexDirection:"row", borderColor:"#514f4f", alignItems:"center", elevation:20, justifyContent:"center"}}
-          onPress ={()=> alert('Parque pago')}
+          onPress ={()=>  this.props.navigation.navigate('Pay', {nome:this.state.nome, tarifa:this.state.tarifa})}
         >
           <Text style={{fontSize:12, color:"#514f4f", fontWeight:'bold', textAlign:"center"}}>Emitir título</Text>
         </TouchableOpacity>

@@ -7,6 +7,7 @@ import Titles from '../screens/Titles';
 import Profile from '../screens/Profile';
 import Park from '../screens/Park';
 import Bills from '../screens/Bills'
+import Pay from '../screens/Pay';
 
 const config = Platform.select({
   web: { headerMode: 'screen' },
@@ -17,7 +18,7 @@ const SearchStack = createStackNavigator(
   {
     Search: HomeScreen,
     Reservar : Park,
-    Bills : Bills
+    Pay: Pay
   },
   config
 );

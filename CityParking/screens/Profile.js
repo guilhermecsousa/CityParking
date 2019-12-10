@@ -6,6 +6,12 @@ export default class App extends Component {
   static navigationOptions =
   {
      title: 'O seu perfil',
+     headerStyle:{
+       height:30
+     },
+     headerTitleStyle:{
+       marginTop:-20
+     }
   };
 
   constructor(props){
@@ -72,7 +78,7 @@ export default class App extends Component {
         <Text style={{color: '#5a6570'}}>   <Text style={{color: '#C85400'}}>                                                  </Text> </Text>
       </View> 
       <View style={styles.MainContainer2}>
-        <View style={{marginLeft:9,}}>
+        <View style={{marginLeft:9,marginBottom:20}}>
           <Button
             onPress={()=> this.props.navigation.navigate('Login')}
             title="Terminar sessão"

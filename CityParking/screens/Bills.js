@@ -4,7 +4,13 @@ import { ScrollView, StyleSheet, View, Text, Button} from 'react-native';
 export default class Bills extends React.Component {
   static navigationOptions =
   {
-    title: 'Faturas'
+    title: 'Faturas',
+    headerStyle:{
+        height:30,
+      },
+      headerTitleStyle:{
+        marginTop:-20
+      }
   }
   
 render(){

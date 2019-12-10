@@ -4,7 +4,13 @@ import { ScrollView, StyleSheet, View, Text, Button} from 'react-native';
 export default class Titles extends Component {
   static navigationOptions =
   {
-    title: 'Títulos ativos'
+    title: 'Títulos ativos',
+    headerStyle:{
+      height:30,
+    },
+    headerTitleStyle:{
+      marginTop:-20
+    }
   }
 
 render(){
@@ -12,7 +18,7 @@ render(){
     <ScrollView style={{backgroundColor: '#FFFDF7'}}> 
       <View>
         <View style={styles.box}>
-          <Text style={{fontSize:20, color:"black", marginLeft:6, marginTop:6, textAlign:'center'}}>Parque nº1 - Universidade de Aveiro</Text>
+          <Text style={{fontSize:20, color:"black", marginLeft:6, marginTop:6, textAlign:'center'}}>Parque Rossio</Text>
         </View>
         <View style={{ marginLeft:15, marginRight:15, marginTop:10, flexDirection:'row',}}>
           <Text style={{marginLeft:8,fontSize:15, color:"#434549"}}>
@@ -41,13 +47,13 @@ render(){
         <View style={{ marginLeft:15, marginRight:15, marginTop:10, flexDirection:'row',}}>
         <Text style={{marginLeft:8,fontSize:15, color:"#434549"}}>
             <Text style={{fontWeight: "bold"}}>Localização: </Text>
-            <Text>Próximo do edifício da Reitoria</Text>
+            <Text>Rossio, Aveiro</Text>
           </Text>
         </View>
         <View style={styles.ButtonContainer}>
           <View style={{marginLeft:9,}}>
             <Button
-              onPress={()=> alert('Título renovado')}
+              onPress ={()=>  this.props.navigation.navigate('Pay', {nome:"Parque Rossio", tarifa:"0,10€/15min"})}
               title="Renovar título"
               color="#C85400"
             />
@@ -92,7 +98,7 @@ render(){
         <View style={styles.ButtonContainer}>
           <View style={{marginLeft:9,}}>
             <Button
-              onPress={()=> alert('Título renovado')}
+              onPress ={()=>  this.props.navigation.navigate('Pay', {nome:"Parque Autocarro Bar", tarifa:"1€/dia"})}
               title="Renovar título"
               color="#C85400"
             />
