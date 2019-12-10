@@ -24,7 +24,7 @@ export default class HomeScreen extends React.Component {
            ["Conselho","Coimbra,40.205642,-8.419551","Arganil,40.218261,-8.054029","Cantanhede,40.346708,-8.594195","Condeixa-a-Nova,40.115733,-8.498336","Figueira da Foz,40.150852,-8.861786","Góis,40.157353,-8.110067","Lousã,40.111911,-8.24703","Mira,40.428924,-8.737462"],
            ["Conselho","Évora,38.566667,-7.9","Alandroal,38.702005,-7.403094","Arraiolos,38.723626,-7.984777","Borba,38.80553,-7.45465","Estremoz,38.844316,-7.585854","Montemor-o-Novo,38.648117,-8.214549","Mora,38.943515,-8.164337","Mourão,38.383562,-7.341888"],
            ["Conselho","Faro,37.019367,-7.932229","Albufeira,37.090205,-8.25079","Alcoutim,37.474317,-7.472282","Aljezur,37.319152,-8.803305","Castro Marim,37.220683,-7.4435","Lagoa,37.135349,-8.453188","Lagos,37.101782,-8.674242"],
-           ["Conselho","Guarda,40.5371,-7.26785", "Gouveia,40.4936,-7.59372","Sabugal,40.3519,-7.08937", "Trancoso,40.7784,-7.34916","Pinhel,40.776,-7.0629","Celorico da Beira,40.6359,-7.39322","Vila Nova de Foz Côa,41.0828,-7.13513","Almeida,40.7263,-6.90695"]
+           ["Conselho","Guarda,40.5371,-7.26785", "Gouveia,40.4936,-7.59372","Sabugal,40.3519,-7.08937", "Trancoso,40.7784,-7.34916","Pinhel,40.776,-7.0629","Celorico da Beira,40.6359,-7.39322","Vila Nova de Foz Côa,41.0828,-7.13513","Almeida,40.7263,-6.90695"],
            ["Conselho","Lisboa,38.716667,-9.133333","Alenquer,39.053151,-9.009282","Amadora,38.759711,-9.239708","Arruda dos Vinhos,38.984106,-9.077463","Azambuja,39.07029,-8.86822","Cadaval,39.242977,-9.103271","Cascais,38.69745,-9.423141","Loures,38.829082,-9.168106"],
            ["Conselho","Porto,41.157947, -8.629111","Amarante,41.272711,-8.082455","Gondomar,41.144536,-8.532229","Maia,41.235739,-8.619897","Marco de Canaveses,41.183887,-8.148641","Matosinhos,41.18207,-8.689076","Póvoa de Varzim,41.38344,-8.763637","Santo Tirso,41.342567,-8.477456","Vila Nova de Gaia,41.133633,-8.617421"],
            ["Conselho","Setúbal,38.533333,-8.9","Alcácer do Sal,38.373258,-8.514436","Alcochete,38.755335,-8.960861","Almada,38.679018,-9.156904","Barreiro,38.663137,-9.072395","Grândola,38.177181,-8.566746","Moita,38.650779,-8.990383","Montijo,38.706747,-8.973885","Santiago do Cacém,38.016935,-8.69475"]
@@ -50,10 +50,10 @@ export default class HomeScreen extends React.Component {
             ncarros:80, capacity:150, horario:"08h00 às 24h00", tarifa:"0,50€/h"},
            {key:6, nome:"Parque Brasília", local:"Av. da Boavista, Porto", latitude:41.157270, longitude:-8.625797, imgURL:'https://www.empark.com/media/cache/media/uploads/parkings/Brasilia_1562576971.jpg',
             ncarros:20, capacity:100, horario:"Disponível 24h", tarifa:"0,55€/15min"},
-           {key:7, nome:"APARC", local:"Pr do Bom Sucesso, Porto", latitude:41.149657, longitude:-8.623802, imgURL:'https://static.parclick.com/parking/2016/06/parking-2473-large.jpg',
+           {key:7, nome:"APARC", local:"Pr. do Bom Sucesso, Porto", latitude:41.149657, longitude:-8.623802, imgURL:'https://static.parclick.com/parking/2016/06/parking-2473-large.jpg',
             ncarros:20, capacity:100, horario:"Disponível 24h", tarifa:"0,55€/15min"}
           ],
-        districts : [{key:0, name:'Local. atual'},{key:1, name:'Aveiro'}, {key:2, name:'Beja'}, {key:3, name:'Bragança'}, {key:4, name:'Castelo Branco'}, {key:5, name:'Coimbra'}, {key:6, name:'Évora'}, {key:7, name:'Faro'}, {key:8, name:'Guarda'}, {key:9, name:'Lisboa'}, {key:10, name:'Porto'}, {key:11, name:'Setúbal'}, {key:12, name:'Viseu'}],
+        districts : [{key:0, name:'Local. atual'},{key:1, name:'Aveiro'}, {key:2, name:'Beja'}, {key:3, name:'Braga'}, {key:4, name:'Bragança'}, {key:5, name:'Castelo Branco'}, {key:6, name:'Coimbra'}, {key:7, name:'Évora'}, {key:8, name:'Faro'}, {key:9, name:'Guarda'}, {key:10, name:'Lisboa'}, {key:11, name:'Porto'}, {key:12, name:'Setúbal'}, {key:13, name:'Viseu'}],
         first: 'District',
         councils: [{key:0, name:' '}],
         second : 'County',
@@ -104,8 +104,6 @@ export default class HomeScreen extends React.Component {
       aux = chose.split(",");
       lat1 =  parseFloat(aux[1]);
       lon1 =  parseFloat(aux[2]);
-      console.log(lat1);
-      console.log(lon1);
       this.setState({
         lat: lat1,
         lon: lon1,
